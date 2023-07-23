@@ -121,9 +121,6 @@ PIN 8 = GND
 
 
 scp -r pocoBnt ssh root@103.190.28.108:/root
-
-var ws = new WebSocket('wss://103.190.29.117:8443');
-
 scp -r pocoBnt ssh root@103.190.29.117:/root
 
 sudo nc -nvlp 777
@@ -139,30 +136,23 @@ git clone https://github.com/masebet/chatApp.git
 
 touch /etc/systemd/system/http.service
 nano /etc/systemd/system/http.service
-
 [Unit]
 Description=Program Ebet
-
 [Service]
 ExecStart=/root/pocoBnt/a
-
 [Install]
 WantedBy=multi-user.target
 
 touch /etc/systemd/system/chat.service
 nano /etc/systemd/system/chat.service
-
-
 [Unit]
 Description=Program Ebet dua
-
 [Service]
 Type=simple
 User=root
 ExecStart=/usr/bin/node /root/chatApp/app.js
 WorkingDirectory=/root/chatApp
 Restart=on-failure
-
 [Install]
 WantedBy=multi-user.target
 
@@ -175,5 +165,4 @@ if(a=="/root/pocoBnt/")a="/root/pocoBnt/index.html";
 
 reboot
 
- 
 pm uninstall -k --user 0 com.google.android.youtube
