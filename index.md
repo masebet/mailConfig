@@ -61,51 +61,9 @@ mutt -f imaps://karebet@arindana.com
 dpkg --list
 sudo apt-get --purge remove vlc
 sudo apt-get autoremove
- sudo apt-get purge --auto-remove vlc
+sudo apt-get purge --auto-remove vlc
 sudo apt-get clean
 
-
-mkdir -p /var/www/your_domain
-chmod -R 755 /var/www/your_domain
-nano /var/www/your_domain/index.html
-<html>
-    <head>
-        <title>Welcome to your_domain!</title>
-    </head>
-    <body>
-        <h1>Success!  The your_domain virtual host is working!</h1>
-    </body>
-</html>
-
-nano /etc/apache2/sites-available/your_domain.conf
-<VirtualHost *:80>
-    ServerAdmin admin@your_email_domain
-    ServerName your_domain
-    ServerAlias www.your_domain
-    DocumentRoot /var/www/your_domain
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-
-a2ensite your_domain.conf
-a2dissite 000-default.conf
-
-apache2ctl configtest
-systemctl reload apache2
-systemctl restart apache2
-
-
-cd certbot certonly \
-    --manual \
-    --preferred-challenges=dns \
-    --email mas.ebet@gmail.com \
-    --server https://acme-v02.api.letsencrypt.org/directory \
-    --work-dir=. --config-dir=. --logs-dir=.  \
-    --agree-tos \
-    -d arindana.com
-
-Certificate is saved at: /root/live/arindana.com/fullchain.pem
-Key is saved at:         /root/live/arindana.com/privkey.pem
 
 PIN 1 =  VCC
 PIN 2 = WIRE TOP + WARNA ORANGE
