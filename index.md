@@ -1,7 +1,7 @@
 apt update 
 apt upgrade
 apt install sudo
-adduser karebet
+engineer karebet
 adduser karebet sudo
 sudo hostnamectl set-hostname arindana.com
 
@@ -17,6 +17,9 @@ sudo nano /etc/dovecot/conf.d/10-auth.conf
 	disable_plaintext_auth = no
 	auth_mechanisms = plain login
 sudo nano /etc/dovecot/conf.d/10-mail.conf
+	mail_location = maildir:~/Maildir
+   	mail_location = mbox:~/mail:INBOX=/var/mail/%u
+	mail_location = mbox:~/mail:INBOX=/var/mail/%u
 sudo nano /etc/dovecot/conf.d/10-master.conf
 	  unix_listener /var/spool/postfix/private/auth {
     		mode = 0666
@@ -26,8 +29,9 @@ sudo nano /etc/dovecot/conf.d/10-master.conf
 sudo apt-get install mariadb-server mariadb-client -y
 	sudo mysql -u root -p
 		create database roundcube;
-		create user 'roundcube'@'localhost' identified by 'password';
-		grant all privileges on roundcube.* to 'roundcube'@'localhost';
+		create user 'engineer'@'localhost' identified by 'password';
+  create user 'engineer'@'bnt-group.co.id' identified by 'kakacinta';
+		grant all privileges on roundcube.* to 'engineer'@'bnt-group.co.id';
 		flush privileges;
 
 sudo apt install roundcube
@@ -53,13 +57,6 @@ systemctl reload apache2
 
 echo "Ini adalah body email" | mail -s "Hello world" info@mail.com
 mutt -f imaps://karebet@arindana.com
-
-
-ssh root@103.190.28.108
-QOsJg8Nu 
-ssh root@103.190.29.117
-efwZD6Jb
-
 
 dpkg --list
 sudo apt-get --purge remove vlc
