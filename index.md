@@ -1,7 +1,8 @@
 apt update 
 apt upgrade
 apt install sudo
-adduser karebet sudo
+sudo useradd {username}
+sudo passwd {username}
 sudo hostnamectl set-hostname arindana.com
 
 apt install postfix
