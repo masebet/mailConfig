@@ -1,7 +1,7 @@
 apt update 
 apt upgrade
 apt install sudo
-sudo useradd {username}
+adduser {username}
 sudo passwd {username}
 sudo hostnamectl set-hostname arindana.com
 
