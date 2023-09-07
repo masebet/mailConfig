@@ -1,7 +1,6 @@
 apt update 
 apt upgrade
 apt install sudo
-engineer karebet
 adduser karebet sudo
 sudo hostnamectl set-hostname arindana.com
 
@@ -65,18 +64,11 @@ sudo apt-get purge --auto-remove vlc
 sudo apt-get clean
 
 
-PIN 1 =  VCC
-PIN 2 = WIRE TOP + WARNA ORANGE
-PIN 3 = WIRE TOP + ION + WARNA BIRU
-PIN 4 = WIRE TOP + BUTTON
-PIN 5 =  A5SHB (misfit p canel)
-PIN 6 =  KIPAS
-PIN 7 = OZON
-PIN 8 = GND
-
-
 scp -r pocoBnt ssh root@103.190.28.108:/root
-scp -r pocoBnt ssh root@103.190.29.117:/root
+scp -r pocoBnt ssh root@arindana.com:/root
+
+
+POCO ===================================================================
 
 sudo nc -nvlp 777
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
@@ -117,7 +109,7 @@ systemctl enable chat.service
 
 string a = "/root/pocoBnt"+request.getURI();
 if(a=="/root/pocoBnt/")a="/root/pocoBnt/index.html";
-
 reboot
+===========================================================POCO
 
 pm uninstall -k --user 0 com.google.android.youtube
