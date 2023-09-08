@@ -1,0 +1,19 @@
+5730 = 5.7mm x 3.0mm
+3528 = 3.5mm x 2.8mm
+2835 = 2.8mm x 3.5mm
+3535 = 3.5mm x 3.5mm
+3030 = 3.0mm x 3.0mm
+7030 = 7.0mm x 3.0mm
+0402 = 1.0 mm x 0.5 mm
+0603 = 1.6 mm x 0.8 mm
+0805 = 2.0 mm x 1.25 mm
+1206 = 3.2mm x 1.5 mm
+
+PIN 1 =  VCC
+PIN 2 = WIRE TOP + WARNA ORANGE
+PIN 3 = WIRE TOP + ION + WARNA BIRU
+PIN 4 = WIRE TOP + BUTTON
+PIN 5 =  A5SHB (misfit p canel)
+PIN 6 =  KIPAS
+PIN 7 = OZON
+PIN 8 = GND
