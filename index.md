@@ -115,3 +115,32 @@ reboot
 ===========================================================POCO
 
 pm uninstall -k --user 0 com.google.android.youtube
+
+
+
+sudo certbot --apache --expand -d arindana.com  -d www.arindana.com  -d mail.arindana.com 
+
+sudo a2ensite mail.arindana.com
+sudo a2dissite  mail.arindana.com
+sudo a2enmod cgid
+
+ScriptAlias "/cgi-bin/" "/usr/local/apache2/cgi-bin/"
+
+sudo apachectl configtest
+sudo systemctl restart apache2
+
+		sudo mysql -u root -p
+		use roundcube;
+  		create user 'engineer'@'bnt-group.co.id' identified by 'kakacinta';
+		grant all privileges on roundcube.* to 'engineer'@'bnt-group.co.id';
+		flush privileges;
+
+sudo apt-get update
+sudo apt-get -y install postgresql
+
+sudo chmod -R a+rwX /var/www
+sudo chmod 755 /var/www/admin/config.inc.php 
+
+sudo a2dismod php7.4 php5.6 
+sudo a2enmod php8.2 
+sudo service apache2 restart 
