@@ -3,6 +3,7 @@ apt upgrade
 apt install sudo
 adduser {username}
 sudo passwd {username}
+adduser {username} sudo
 sudo hostnamectl set-hostname arindana.com
 
 apt install postfix
