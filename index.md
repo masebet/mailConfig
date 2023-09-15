@@ -66,8 +66,8 @@ sudo apt-get purge --auto-remove vlc
 sudo apt-get clean
 
 
-scp -r pocoBnt ssh root@103.190.28.108:/root
-scp -r pocoBnt ssh root@arindana.com:/root
+scp -r pocoBnt root@103.190.28.108:/root
+scp -r pocoBnt root@arindana.com:/root
 
 
 POCO ===================================================================
