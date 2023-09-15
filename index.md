@@ -69,6 +69,9 @@ sudo apt-get clean
 scp -r pocoBnt root@103.190.28.108:/root
 scp -r pocoBnt root@arindana.com:/root
 
+scp -r root@103.190.28.108:/root .
+scp -r root@arindana.com:/root .
+
 
 POCO ===================================================================
 
